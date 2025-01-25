@@ -1,0 +1,63 @@
+- Convertitore ascii-hex (attenzione agli spazi):
+	https://www.rapidtables.com/convert/number/ascii-to-hex.html
+- Tavola Vigenere online (impostare l'alfabeto scelto):
+	http://www.crittologia.eu/critto/vigenere.html
+
+* PSX -> PrimoSimbolo (in hex), il primo carattere del set utilizzato (es. 41 = A, 61 = a)
+* DIM -> DimAlfabeto (in hex), dimensione del set di caratteri (es. 1a = 26)
+
+* |TXT| -> Testo in chiaro
+* |KEY| -> Chiave
+* |ENC| -> Testo in codice
+
+
+=============== ESEMPIO 1 =============== PSX = 41, DIM = 1a ==============
+
+|TXT|	NONVEDONONSENTONONPARLO
+|KEY|	SOLE
+|ENC|	FCYZWRZRGBDIFHZRGBAEJZZ
+
+|TXT|	4E 4F 4E 56 45 44 4F 4E 4F 4E 53 45 4E 54 4F 4E 4F 4E 50 41 52 4C 4F
+|KEY|	53 4F 4C 45
+|ENC|	46 43 59 5A 57 52 5A 52 47 42 44 49 46 48 5A 52 47 42 41 45 4A 5A 5A
+
+=============== ESEMPIO 2 =============== PSX = 41, DIM = 1a ==============
+
+|TXT|	ARCHITETTURADEGLIELABORATORI
+|KEY|	UNICT
+|ENC|	UEKJBNRBVNLNLGZFVMNTVBZCMIEQ
+	
+|TXT|	41 52 43 48 49 54 45 54 54 55 52 41 44 45 47 4C 49 45 4C 41 42 4F 52 41 54 4F 52 49
+|KEY|	55 4E 49 43 54
+|ENC|	55 45 4B 4A 42 4E 52 42 56 4E 4C 4E 4C 47 5A 46 56 4D 4E 54 56 42 5A 43 4D 49 45 51
+
+=============== ESEMPIO 3 =============== PSX = 41, DIM = 1a ==============
+
+|TXT|	GATTOCERCAGATTO
+|KEY|	TERNI
+|ENC|	ZEKGWVIIPIZEKGW
+	
+|TXT|	47 41 54 54 4F 43 45 52 43 41 47 41 54 54 4F
+|KEY|	54 45 52 4E 49
+|ENC|	5A 45 4B 47 57 56 49 49 50 49 5A 45 4B 47 57
+
+=============== ESEMPIO 4 =============== PSX = 61, DIM = 1a ==============
+
+|TXT|	nelmezzodelcammindinostravita
+|KEY|	dante
+|ENC|	qeyficzbwiocnfqlnqbrrsgkeyigt
+	
+|TXT|	6E 65 6C 6D 65 7A 7A 6F 64 65 6C 63 61 6D 6D 69 6E 64 69 6E 6F 73 74 72 61 76 69 74 61
+|KEY|	64 61 6E 74 65
+|ENC|	71 65 79 66 69 63 7A 62 77 69 6F 63 6E 66 71 6C 6E 71 62 72 72 73 67 6B 65 79 69 67 74
+
+=============== ESEMPIO 5 =============== PSX = 30, DIM = 0a ==============
+[le date degli appelli di architettura degli elaboratori]
+
+|TXT|	280118021706020702091609
+|KEY|	2025
+|ENC|	482638273721222222243624
+	
+|TXT|	32 38 30 31 31 38 30 32 31 37 30 36 30 32 30 37 30 32 30 39 31 36 30 39
+|KEY|	32 30 32 35
+|ENC|	34 38 32 36 33 38 32 37 33 37 32 31 32 32 32 32 32 32 32 34 33 36 32 34
